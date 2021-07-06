@@ -1,0 +1,19 @@
+{
+	"name": "apps",
+	"version": "1.0.0",
+	"description": "apps.lospec.com",
+	"main": "build.sh",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/lospec/apps.git"
+	},
+	"author": "lospec",
+	"license": "UNLICENCED",
+	"bugs": {
+		"url": "https://github.com/lospec/apps/issues"
+	},
+	"homepage": "https://github.com/lospec/apps#readme"
+}
