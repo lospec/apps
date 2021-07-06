@@ -1,3 +1,8 @@
+echo 
+echo Building apps.Lospec.com
+echo
+set -x #echo on
+
 #setup
 mkdir ./build
 
