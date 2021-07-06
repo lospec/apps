@@ -4,7 +4,9 @@
 	"description": "apps.lospec.com",
 	"main": "build.sh",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "bash build.sh",
+		"serve": "http-server ./build"
 	},
 	"repository": {
 		"type": "git",
@@ -15,5 +17,8 @@
 	"bugs": {
 		"url": "https://github.com/lospec/apps/issues"
 	},
-	"homepage": "https://github.com/lospec/apps#readme"
+	"homepage": "https://github.com/lospec/apps#readme",
+	"dependencies": {
+		"http-server": "^0.12.3"
+	}
 }
