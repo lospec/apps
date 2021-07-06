@@ -12,11 +12,11 @@ npm run build
 echo 
 echo installed pixel editor
 echo
-cp -a ./build ../build/hello
+cp -a ./build ../build/hello --verbose
 
 cd ..
 
 #final
 
-cp index.htm build
+cp index.htm build --verbose
 
