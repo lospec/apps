@@ -3,6 +3,7 @@ echo Building apps.Lospec.com
 echo
 set -x #echo on
 
+mkdir ./build
 
 #PIXEL EDITOR
 #git clone https://github.com/lospec/pixel-editor
