@@ -1,0 +1,128 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	image-rendering: pixelated;
+}
+
+@font-face {
+	font-family: '04B_03_';
+	src: url('04B_03_.TTF');
+}
+
+os {
+	--black: #00000;
+	--lightgrey: #7b6c7f;
+	--darkgrey: #372742;
+	--white: #c5c4c4;
+
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	background-color: var(--lightgrey);
+	justify-content: space-between;
+	font-family: '04B_03_';
+	font-size: 24px;
+	user-select: none;
+
+	cursor: url('cursor.png'), auto;
+
+	desktop {
+		flex-grow: 1;
+
+		a {
+			display: inline-block;
+			border: solid 3px transparent;
+			margin: 0.25em;
+			padding: 0.5em;
+			text-decoration: none;
+			color: var(--white);
+			text-shadow: var(--darkgrey) 3px 3px 1px;
+			width: 120px;
+			text-align: center;			
+		}
+
+		a.focused {
+			border-image: url('selected.png') 3 round;
+		}
+
+		a::before {
+			content: '';
+			display: block;
+			width: 72px;
+			height: 72px;
+			background-image: url('icons.png');
+			background-position: 0 0;
+			background-size: 400%;
+			background-repeat: no-repeat;
+			overflow: hidden;
+			margin: 0 auto 0.5em;
+		}
+
+		a::after {
+			content: attr(title);
+			margin: 0 auto;
+			display: block; /* Fallback for non-webkit */
+			display: -webkit-box;
+			height: 3.9em; /* Fallback for non-webkit, line-height * 3 */
+			line-height: 1.3em;
+			-webkit-line-clamp: 3; /* if you change this, make sure to change the fallback line-height and height */
+			line-clamp: 3; /* if you change this, make sure to change the fallback line-height and height */
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			word-break: break-word;
+		}
+
+		a.lospecpixeleditor::before { background-position: 0 -72px; }
+		a.lvllvl::before { background-position: -72px -72px; }
+		a.bassoontracker::before { background-position: -144px -72px; }
+
+	}
+
+	taskbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+		background-color: var(--darkgrey);
+		color: white;
+		padding: 0;
+		
+		border-image: url('taskbar.png') 4 stretch;
+		border-width: 12px;
+		border-style: solid;
+		image-rendering: pixelated;
+
+		startmenu, button, time {
+			background-color: var(--darkgrey);
+			border-image: url('taskbar.png') 4 stretch;
+			border-width: 12px;
+			border-style: solid;
+			image-rendering: pixelated;
+			margin: -12px;
+			padding: 0.125em 0.5em 0;
+			line-height: 1em;
+			text-shadow: #000 3px 3px 1px;
+		}
+
+
+
+		space {flex-grow: 1;}
+		button {
+			display: inline-block;
+			min-width: 6em;
+		}
+		button.volume {
+			background-image: url('sprites.png');
+			background-position: 0 0; /* Shift the background to show only the top-left 8x8 pixels */
+			background-size: 8px 8px; /* Scale the image to 8x8 pixels to ensure only the top-left 8x8 pixels are visible */
+			background-repeat: no-repeat; /* Prevent the background from repeating */
+			background-origin: content-box; /* Ensure the background is positioned relative to the content box */
+			background-clip: content-box; /* Ensure the background is clipped to the content box */
+
+		}
+	}
+}

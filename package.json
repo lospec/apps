@@ -4,9 +4,8 @@
 	"description": "apps.lospec.com",
 	"main": "build.sh",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "bash build.sh",
-		"serve": "http-server ./build"
+		"serve": "http-server ./dist"
 	},
 	"repository": {
 		"type": "git",
