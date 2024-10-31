@@ -15,6 +15,6 @@ cd ..
 
 #final
 
-cp index.htm build --verbose
-cp _redirects build --verbose
+#cp index.htm build --verbose
+#cp _redirects build --verbose
 
